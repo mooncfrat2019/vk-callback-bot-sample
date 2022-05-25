@@ -19,8 +19,11 @@ All environment written in .env.example. Don't store actual .env file in git. If
 
 ## Run
 To run it there several ways:
-1. Heroku. One of the best cheap ways fo test. Now there 0 cost. All you need, is to select Heroku Gradle prebuild settin, push code to repository and properly define envs. 
-2. If you own some server or paid cloud account, you can use Docker (sample of working Dockerfile is in project root).
+
+1. Heroku. One of the best cheap ways fo test. Now there 0 cost. All you need, is to select Heroku Gradle prebuild setting, push code to repository and properly define envs. 
+
+2. If you own some server or paid cloud account, you can use Docker (sample of working Dockerfile is in project root). Also you can start project with script `start.sh`.
+
 3. Run on VPS/VDS like instance with dradle/gradlew.
 
 Tested with JDK 11
