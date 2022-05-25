@@ -15,6 +15,7 @@ plugins {
     application
     kotlin("jvm") version "1.6.20"
     kotlin("plugin.serialization") version "1.4.21"
+    id("com.github.johnrengelman.shadow") version "7.1.2"
 }
 
 application {
@@ -34,6 +35,7 @@ repositories {
 
 dependencies {
     testImplementation(kotlin("test"))
+    implementation("org.jetbrains.kotlin:kotlin-stdlib:1.0.1-2")
     implementation("io.ktor:ktor-server-core:${KTOR}")
     implementation("io.ktor:ktor-server-netty:${KTOR}")
     implementation("io.ktor:ktor-serialization-kotlinx-json:${KTOR}")
@@ -57,6 +59,10 @@ dependencies {
 
 tasks.test {
     useJUnitPlatform()
+}
+
+tasks.jar {
+    manifest.attributes["Main-Class"] = "ser.MainKt"
 }
 
 tasks.withType<KotlinCompile> {
